@@ -7,7 +7,7 @@ void on_button_click();
 int main(int argc, char *argv[]){
     auto app = Gtk::Application::create(argc, argv, "org.gtkmm.examples.base");
     Gtk::Window window;
-    Gtk::Button button("Click here");
+    Gtk::Button button("Click here"); //using Button fills up the whole window? use Box
 
     window.set_default_size(600, 360);
     window.set_title("Burger Bistro");
