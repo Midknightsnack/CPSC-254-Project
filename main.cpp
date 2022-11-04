@@ -5,15 +5,17 @@
 int main(int argc, char *argv[]) {
     
     GtkWidget *window, *fixed;
-    GtkWidget *review, *menu, *locations, *rewards, *reservation, *pay; // declare buttons
+    GtkWidget *review, *menu, *locations, *rewards,
+              *reservation, *pay, *exit; // declare buttons
+    //GtkWidget *burger_icon;
 
     gtk_init(&argc, &argv);
 
     // Initialize window
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(window), "Burger Bistro");
-    gtk_window_set_default_size(GTK_WINDOW(window), 1000, 800);
-    gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+    gtk_window_set_default_size(GTK_WINDOW(window), 1360, 600); // full window size on my screen
+    //gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
 
     fixed = gtk_fixed_new();
     gtk_container_add(GTK_CONTAINER(window), fixed);
@@ -48,7 +50,15 @@ int main(int argc, char *argv[]) {
     gtk_fixed_put(GTK_FIXED(fixed), pay, 700, 0); // (x, y) coordinates
     gtk_widget_set_size_request(pay, 70, 30); // size of the button
 
-    g_signal_connect(G_OBJECT(review), "clicked", 
+    // Exit Button
+    exit = gtk_button_new_with_label("Exit");
+    gtk_fixed_put(GTK_FIXED(fixed), exit, 1200, 0); // (x, y) coordinates
+    gtk_widget_set_size_request(exit, 70, 30); // size of the button
+
+    // burger_icon = gtk_image_new_from_file("/images/burger_icon.png");
+    // gtk_container_add(GTK_CONTAINER(window), burger_icon);
+
+    g_signal_connect(G_OBJECT(exit), "clicked", 
         G_CALLBACK(gtk_main_quit), G_OBJECT(window));
 
     g_signal_connect(G_OBJECT(window), "destroy", 
