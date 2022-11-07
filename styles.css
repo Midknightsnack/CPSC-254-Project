@@ -1,0 +1,14 @@
+window{
+    background-color:cornflowerblue;
+    background-image: url('images/burger_icon.png');
+}
+
+#btn_red{
+    background-color: crimson;
+}
+
+/* #darea{
+    width: 100px;
+    height: 100px;
+    background: red;
+} */
