@@ -2,6 +2,8 @@
 #include <cairo.h>
 #include <gtkmm.h>
 #include <iostream>
+#include "click.h"
+using namespace std;
 
 // allows css properties to load in GUI
 static void load_css(void){
@@ -39,6 +41,7 @@ static void load_css(void){
 int main(int argc, char *argv[]) {
     
     // GtkWidget *darea;
+    // GtkWidget *menu_window;
     GtkWidget *window, *fixed; 
     GtkWidget *review, *menu, *locations, *rewards,
               *reservation, *pay, *exit; // declare buttons
@@ -52,6 +55,8 @@ int main(int argc, char *argv[]) {
     gtk_window_set_default_size(GTK_WINDOW(window), 1360, 600); // full window size on my screen
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
 
+    //menu_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+
     fixed = gtk_fixed_new();
     gtk_container_add(GTK_CONTAINER(window), fixed);
 
@@ -61,17 +66,19 @@ int main(int argc, char *argv[]) {
     // g_signal_connect(G_OBJECT(darea), "draw", 
     //     G_CALLBACK(on_draw_event), NULL);
 
-    // Review Button
-    review = gtk_button_new_with_label("Write a Review");
-    gtk_widget_set_name(review, "btn_red");
-    gtk_fixed_put(GTK_FIXED(fixed), review, 0, 0); // (x, y) coordinates
-    gtk_widget_set_size_request(review, 70, 30); // size of the button (x,y)
-    
     // Menu Button
     menu = gtk_button_new_with_label("Menu");
-    gtk_fixed_put(GTK_FIXED(fixed), menu, 0, 50); 
-    gtk_widget_set_size_request(menu, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), menu, 0, 0); // (x, y) coordinates
+    gtk_widget_set_size_request(menu, 70, 30); // size of the button (x,y)
+    g_signal_connect(menu, "clicked", G_CALLBACK(on_button_click), NULL); //call function from menu.cpp
+    //g_signal_connect(menu, "clicked", G_CALLBACK(on_button_click), (gpointer)menu_window);
 
+    // Review Button
+    review = gtk_button_new_with_label("Write a Review");
+    gtk_widget_set_name(review, "btn_red"); // button only turns red when clicked on
+    gtk_fixed_put(GTK_FIXED(fixed), review, 0, 50); 
+    gtk_widget_set_size_request(review, 70, 30); 
+    
     // Location Button
     locations = gtk_button_new_with_label("View Locations");
     gtk_fixed_put(GTK_FIXED(fixed), locations, 0, 100); 
