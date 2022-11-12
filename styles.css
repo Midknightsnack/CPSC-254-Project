@@ -7,6 +7,17 @@ window{
     background-color: crimson;
 }
 
+/* #cburg_img{
+    height: 100px;
+    width: auto;
+} */
+
+#cburg_btn{
+    background-image: url('images/burgers/cheeseburger.jpg');
+    background-position: 0px 0px;
+    color: white;
+}
+
 /* #darea{
     width: 100px;
     height: 100px;
