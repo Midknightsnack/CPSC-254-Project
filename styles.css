@@ -53,8 +53,41 @@ window{
 }
 
 /*Sides*/
-/*Drinks*/
+#nuggets_btn{
+    background-image: url('images/sides/chicken_nuggets.jpg');
+    background-position: 0px 0px;
+}
 
+#fries_btn{
+    background-image: url('images/sides/fries.jpg');
+    background-position: 0px 0px;
+}
+
+#onion_rings_btn{
+    background-image: url('images/sides/onion_rings.jpg');
+    background-position: 0px 0px;
+}
+
+/*Drinks*/
+#soda_btn{
+    background-image: url('images/drinks/soda.jpg');
+    background-position: 0px 0px;
+}
+
+#lemonade_btn{
+    background-image: url('images/drinks/lemonade.jpg');
+    background-position: 0px 0px;
+}
+
+#milkshake_btn{
+    background-image: url('images/drinks/milkshake.jpg');
+    background-position: 0px 0px;
+}
+
+#bluedrink_btn{
+    background-image: url('images/drinks/blue_bistro.jpg');
+    background-position: 0px 0px;
+}
 /* #cburg_img{
     height: 200px;
     width: auto;

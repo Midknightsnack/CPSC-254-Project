@@ -29,7 +29,6 @@ static void load_css(void){
 int main(int argc, char *argv[]) {
     
     GtkWidget *window, *fixed, *back_button, *pay; 
-    //GtkWidget *cheeseburger_img;
     GtkWidget *wbacon_btn, *wbacon_info, *wagyu_btn, *wagyu_info,
               *bistro_btn, *bistro_info, *gold_btn, *gold_info;
 
@@ -93,7 +92,7 @@ int main(int argc, char *argv[]) {
     gtk_fixed_put(GTK_FIXED(fixed), gold_btn, 700, 300); 
     gtk_widget_set_size_request(gold_btn, 200, 200);
 
-    gold_info = gtk_button_new_with_label("Gold Burger (w/ side of choice): \n gold sesame buns,"
+    gold_info = gtk_button_new_with_label("Gold Burger (w/ side of choice): \ngold sesame buns,"
                             " wagyu beef, cheese, tomato, lettuce, bistro sauce" 
                             " \nPrice: $1500.00");
     gtk_fixed_put(GTK_FIXED(fixed), gold_info, 900, 300); 
