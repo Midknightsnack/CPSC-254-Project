@@ -7,6 +7,8 @@ window{
     background-color: crimson;
 }
 
+/*Menu*/
+/*Burgers*/
 #cburg_btn{
     background-image: url('images/burgers/cheeseburger.jpg');
     background-position: 0px 0px;
@@ -18,6 +20,40 @@ window{
     background-image: url('images/burgers/chicken_sandwich.jpg');
     background-position: 0px 0px;
 }
+
+#pretzel_btn{
+    background-image: url('images/burgers/pretzel_bun.jpg');
+    background-position: 0px 0px;
+}
+
+#fish_btn{
+    background-image: url('images/burgers/fish_burger.jpg');
+    background-position: 0px 0px;
+}
+
+/*Deluxe Burgers*/
+#wbacon_btn{
+    background-image: url('images/deluxe_burgers/western_bacon.jpg');
+    background-position: 0px 0px;
+}
+
+#wagyu_btn{
+    background-image: url('images/deluxe_burgers/wagyu.jpg');
+    background-position: 0px 0px;
+}
+
+#bistro_btn{
+    background-image: url('images/deluxe_burgers/bistro.jpg');
+    background-position: 0px 0px;
+}
+
+#gold_btn{
+    background-image: url('images/deluxe_burgers/gold.jpg');
+    background-position: 0px 0px;
+}
+
+/*Sides*/
+/*Drinks*/
 
 /* #cburg_img{
     height: 200px;

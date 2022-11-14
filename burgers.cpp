@@ -65,10 +65,9 @@ int main(int argc, char *argv[]) {
     // g_signal_connect(cheeseburger_btn, "clicked", G_CALLBACK(burger_button_click), NULL);
 
     cheeseburger_info = gtk_button_new_with_label("Cheeseburger: \nsesame buns, beef, onions," 
-                            " tomato, lettuce, cheese, bacon, ketchup");
+                            " tomato, lettuce, cheese, bacon, ketchup \nPrice: $5.00");
     gtk_fixed_put(GTK_FIXED(fixed), cheeseburger_info, 200, 50); 
     gtk_widget_set_size_request(cheeseburger_info, 200, 200);
-
 
     // Chicken Sandwich Image/ Button
     ch_sand_btn = gtk_button_new();
@@ -77,9 +76,31 @@ int main(int argc, char *argv[]) {
     gtk_widget_set_size_request(ch_sand_btn, 200, 200);
 
     ch_sand_info = gtk_button_new_with_label("Chicken Sandwich: \nbrioche buns, fried chicken, " 
-                            " pickles, bistro sauce");
+                            " pickles, bistro sauce \nPrice: $5.00");
     gtk_fixed_put(GTK_FIXED(fixed), ch_sand_info, 200, 300); 
     gtk_widget_set_size_request(ch_sand_info, 200, 200);
+
+    // Pretzel Bun Image/ Button
+    pretzel_btn = gtk_button_new();
+    gtk_widget_set_name(pretzel_btn, "pretzel_btn");
+    gtk_fixed_put(GTK_FIXED(fixed), pretzel_btn, 700, 50); 
+    gtk_widget_set_size_request(pretzel_btn, 200, 200);
+
+    pretzel_info = gtk_button_new_with_label("Pretzel Bun Burger: \npretzel buns, beef, lettuce," 
+                            " cheese, \nbacon, fried onions, pickles, bistro sauce \nPrice: $7.00");
+    gtk_fixed_put(GTK_FIXED(fixed), pretzel_info, 900, 50); 
+    gtk_widget_set_size_request(pretzel_info, 200, 200);
+
+    // Fish Burger Image/ Button
+    fish_btn = gtk_button_new();
+    gtk_widget_set_name(fish_btn, "fish_btn");
+    gtk_fixed_put(GTK_FIXED(fixed), fish_btn, 700, 300); 
+    gtk_widget_set_size_request(fish_btn, 200, 200);
+
+    fish_info = gtk_button_new_with_label("Fish Burger: \nbrioche buns, fried cod, coleslaw, tartar sauce" 
+                            " \nPrice: $4.00");
+    gtk_fixed_put(GTK_FIXED(fixed), fish_info, 900, 300); 
+    gtk_widget_set_size_request(fish_info, 200, 200);
 
     // Pay Online Button
     pay = gtk_button_new_with_label("Pay Online");
