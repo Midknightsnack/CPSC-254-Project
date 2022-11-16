@@ -97,7 +97,7 @@ int main(int argc, char *argv[]) {
     gtk_fixed_put(GTK_FIXED(fixed), fish_btn, 700, 300); 
     gtk_widget_set_size_request(fish_btn, 200, 200);
 
-    fish_info = gtk_button_new_with_label("Fish Burger: \nbrioche buns, fried cod, coleslaw, tartar sauce" 
+    fish_info = gtk_button_new_with_label("Fish Burger: \nbrioche buns, battered cod, tomato, lettuce, tartar sauce" 
                             " \nPrice: $4.00");
     gtk_fixed_put(GTK_FIXED(fixed), fish_info, 900, 300); 
     gtk_widget_set_size_request(fish_info, 200, 200);
