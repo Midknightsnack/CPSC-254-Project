@@ -13,7 +13,7 @@ int main(){
 
     vector<string> western_bacon = {"burgers", "deluxe", "deluxe burgers", "brioche buns", "beef", 
                                     "onion rings", "onions", "cheese", "bacon", "BBQ sauce", "western bacon cheeseburger"}; 
-    vector<string> wagyu_burger = {"burgers", "deluxe", "deluxe burgers", "brioche buns", "wagyu beef", "wagyu"
+    vector<string> wagyu_burger = {"burgers", "deluxe", "deluxe burgers", "brioche buns", "wagyu beef", "wagyu",
                                     "cheese", "pickles", "ketchup", "cheese sauce", "bistro sauce", "wagyu burger"};
     vector<string> bistro_burger = {"burgers", "deluxe", "deluxe burgers", "sesame buns", "beef", "lettuce", "tomato", 
                                     "onion rings", "onions", "cheese", "bistro sauce", "BBQ sauce", "bistro burger"};
@@ -26,7 +26,7 @@ int main(){
 
     vector<string> soda = {"drinks", "soda"};
     vector<string> lemonade = {"drinks", "lemonade"};
-    vector<string> milkshake = {"drinks", "milkshake"};
+    vector<string> milkshake = {"drinks", "strawberry", "vanilla", "chocolate", "milkshake"};
     vector<string> blue_bistro = {"drinks", "soda", "blue bistro"};
 
     string menu_item;

@@ -56,22 +56,22 @@ int main(int argc, char *argv[]) {
     
     // Burgers Button
     burgers = gtk_button_new_with_label("Burgers");
-    gtk_fixed_put(GTK_FIXED(fixed), burgers, 400, 100); 
+    gtk_fixed_put(GTK_FIXED(fixed), burgers, 480, 100); 
     gtk_widget_set_size_request(burgers, 200, 200); 
 
     // Deluxe Burgers Button
     deluxe_burgers = gtk_button_new_with_label("Deluxe Burgers");
-    gtk_fixed_put(GTK_FIXED(fixed), deluxe_burgers, 700, 100); 
+    gtk_fixed_put(GTK_FIXED(fixed), deluxe_burgers, 680, 100); 
     gtk_widget_set_size_request(deluxe_burgers, 200, 200); 
 
     // Sides Button
     sides = gtk_button_new_with_label("Sides");
-    gtk_fixed_put(GTK_FIXED(fixed), sides, 400, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), sides, 480, 300); 
     gtk_widget_set_size_request(sides, 200, 200); 
 
     // Drinks Button
     drinks = gtk_button_new_with_label("Drinks");
-    gtk_fixed_put(GTK_FIXED(fixed), drinks, 700, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), drinks, 680, 300); 
     gtk_widget_set_size_request(drinks, 200, 200); 
 
     g_signal_connect(G_OBJECT(window), "destroy", 
