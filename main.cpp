@@ -55,7 +55,8 @@ int main(int argc, char *argv[]) {
     gtk_window_set_default_size(GTK_WINDOW(window), 1360, 600); // full window size on my screen
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
 
-    //menu_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    // menu_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    // gtk_window_set_default_size(GTK_WINDOW(menu_window), 1360, 600);
 
     fixed = gtk_fixed_new();
     gtk_container_add(GTK_CONTAINER(window), fixed);
@@ -70,7 +71,7 @@ int main(int argc, char *argv[]) {
     menu = gtk_button_new_with_label("Menu");
     gtk_fixed_put(GTK_FIXED(fixed), menu, 0, 0); // (x, y) coordinates
     gtk_widget_set_size_request(menu, 70, 30); // size of the button (x,y)
-    g_signal_connect(menu, "clicked", G_CALLBACK(on_button_click), NULL); //call function from menu.cpp
+    //g_signal_connect(menu, "clicked", G_CALLBACK(on_button_click), NULL); //call function from menu.cpp
     //g_signal_connect(menu, "clicked", G_CALLBACK(on_button_click), (gpointer)menu_window);
 
     // Review Button
