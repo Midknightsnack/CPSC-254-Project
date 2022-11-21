@@ -46,13 +46,13 @@ int main(int argc, char *argv[]) {
 
     // Back Button
     back_button = gtk_button_new_with_label("Back");
-    gtk_fixed_put(GTK_FIXED(fixed), back_button, 0, 0); // (x, y) coordinates
-    gtk_widget_set_size_request(back_button, 70, 30); // size of the button (x,y)
+    gtk_fixed_put(GTK_FIXED(fixed), back_button, 0, 25); // (x, y) coordinates
+    gtk_widget_set_size_request(back_button, 100, 50); // size of the button (x,y)
 
     // Search Button
     search = gtk_button_new_with_label("Search Menu");
-    gtk_fixed_put(GTK_FIXED(fixed), search, 100, 0); 
-    gtk_widget_set_size_request(search, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), search, 200, 25); 
+    gtk_widget_set_size_request(search, 100, 50); 
     
     // Burgers Button
     burgers = gtk_button_new_with_label("Burgers");

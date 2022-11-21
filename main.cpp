@@ -69,45 +69,44 @@ int main(int argc, char *argv[]) {
 
     // Menu Button
     menu = gtk_button_new_with_label("Menu");
-    gtk_fixed_put(GTK_FIXED(fixed), menu, 0, 0); // (x, y) coordinates
-    gtk_widget_set_size_request(menu, 70, 30); // size of the button (x,y)
+    gtk_fixed_put(GTK_FIXED(fixed), menu, 0, 25); // (x, y) coordinates
+    gtk_widget_set_size_request(menu, 100, 50); // size of the button (x,y)
     //g_signal_connect(menu, "clicked", G_CALLBACK(on_button_click), NULL); //call function from menu.cpp
     //g_signal_connect(menu, "clicked", G_CALLBACK(on_button_click), (gpointer)menu_window);
 
     // Review Button
     review = gtk_button_new_with_label("Write a Review");
     gtk_widget_set_name(review, "btn_red"); // button only turns red when clicked on
-    gtk_fixed_put(GTK_FIXED(fixed), review, 0, 50); 
-    gtk_widget_set_size_request(review, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), review, 225, 25); 
+    gtk_widget_set_size_request(review, 100, 50); 
     
     // Location Button
     locations = gtk_button_new_with_label("View Locations");
-    gtk_fixed_put(GTK_FIXED(fixed), locations, 0, 100); 
-    gtk_widget_set_size_request(locations, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), locations, 450, 25); 
+    gtk_widget_set_size_request(locations, 100, 50); 
 
     // Rewards Button
     rewards = gtk_button_new_with_label("Rewards");
-    gtk_fixed_put(GTK_FIXED(fixed), rewards, 0, 150); 
-    gtk_widget_set_size_request(rewards, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), rewards, 775, 25); 
+    gtk_widget_set_size_request(rewards, 100, 50); 
 
     // Reservation Button
     reservation = gtk_button_new_with_label("Make a Reservation");
-    gtk_fixed_put(GTK_FIXED(fixed), reservation, 0, 200); 
-    gtk_widget_set_size_request(reservation, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), reservation, 1000, 25); 
+    gtk_widget_set_size_request(reservation, 100, 50); 
 
     // Pay Online Button
     pay = gtk_button_new_with_label("Pay Online");
-    gtk_fixed_put(GTK_FIXED(fixed), pay, 0, 250); 
-    gtk_widget_set_size_request(pay, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), pay, 1260, 25); 
+    gtk_widget_set_size_request(pay, 100, 50); 
 
     // Exit Button
-    exit = gtk_button_new_with_label("Exit");
-    gtk_fixed_put(GTK_FIXED(fixed), exit, 0, 300); 
-    gtk_widget_set_size_request(exit, 70, 30); 
+    // exit = gtk_button_new_with_label("Exit");
+    // gtk_fixed_put(GTK_FIXED(fixed), exit, 0, 300); 
+    // gtk_widget_set_size_request(exit, 70, 30); 
 
-
-    g_signal_connect(G_OBJECT(exit), "clicked", 
-        G_CALLBACK(gtk_main_quit), G_OBJECT(window));
+    // g_signal_connect(G_OBJECT(exit), "clicked", 
+    //     G_CALLBACK(gtk_main_quit), G_OBJECT(window));
 
     g_signal_connect(G_OBJECT(window), "destroy", 
         G_CALLBACK(gtk_main_quit), NULL);
