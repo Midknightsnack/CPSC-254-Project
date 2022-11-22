@@ -46,44 +46,44 @@ int main(int argc, char *argv[]) {
 
     // Back Button
     back_button = gtk_button_new_with_label("Back");
-    gtk_fixed_put(GTK_FIXED(fixed), back_button, 0, 0); 
-    gtk_widget_set_size_request(back_button, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), back_button, 0, 25); 
+    gtk_widget_set_size_request(back_button, 100, 50); 
 
     // Chicken Nuggets Image/ Button
     nuggets_btn = gtk_button_new();
     gtk_widget_set_name(nuggets_btn, "nuggets_btn");
 
-    gtk_fixed_put(GTK_FIXED(fixed), nuggets_btn, 0, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), nuggets_btn, 0, 100); 
     gtk_widget_set_size_request(nuggets_btn, 200, 200);
 
     nuggets_info = gtk_button_new_with_label("Chicken Nuggets: \n5 pc: $3.00 \n10 pc: $4.50");
-    gtk_fixed_put(GTK_FIXED(fixed), nuggets_info, 200, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), nuggets_info, 200, 100); 
     gtk_widget_set_size_request(nuggets_info, 200, 200);
 
     // Fries Image/ Button
     fries_btn = gtk_button_new();
     gtk_widget_set_name(fries_btn, "fries_btn");
-    gtk_fixed_put(GTK_FIXED(fixed), fries_btn, 0, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), fries_btn, 0, 350); 
     gtk_widget_set_size_request(fries_btn, 200, 200);
 
     fries_info = gtk_button_new_with_label("Fries: \nSmall: $1.50 \nMedium: $1.75 \nLarge: $2.00");
-    gtk_fixed_put(GTK_FIXED(fixed), fries_info, 200, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), fries_info, 200, 350); 
     gtk_widget_set_size_request(fries_info, 200, 200);
 
     // Onion Rings Image/ Button
     onion_rings_btn = gtk_button_new();
     gtk_widget_set_name(onion_rings_btn, "onion_rings_btn");
-    gtk_fixed_put(GTK_FIXED(fixed), onion_rings_btn, 700, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), onion_rings_btn, 700, 100); 
     gtk_widget_set_size_request(onion_rings_btn, 200, 200);
 
     onion_rings_info = gtk_button_new_with_label("Onion Rings (10 pc): \nPrice: $4.00");
-    gtk_fixed_put(GTK_FIXED(fixed), onion_rings_info, 900, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), onion_rings_info, 900, 100); 
     gtk_widget_set_size_request(onion_rings_info, 200, 200);
 
     // Pay Online Button
     pay = gtk_button_new_with_label("Pay Online");
-    gtk_fixed_put(GTK_FIXED(fixed), pay, 100, 0); 
-    gtk_widget_set_size_request(pay, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), pay, 150, 25); 
+    gtk_widget_set_size_request(pay, 100, 50); 
 
     g_signal_connect(G_OBJECT(window), "destroy", 
         G_CALLBACK(gtk_main_quit), NULL);

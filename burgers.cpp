@@ -29,7 +29,6 @@ static void load_css(void){
 int main(int argc, char *argv[]) {
     
     GtkWidget *window, *fixed, *back_button, *pay; 
-    //GtkWidget *cheeseburger_img;
     GtkWidget *cheeseburger_btn, *cheeseburger_info, *ch_sand_btn, *ch_sand_info,
               *pretzel_btn, *pretzel_info, *fish_btn, *fish_info;
 
@@ -47,65 +46,57 @@ int main(int argc, char *argv[]) {
 
     // Back Button
     back_button = gtk_button_new_with_label("Back");
-    gtk_fixed_put(GTK_FIXED(fixed), back_button, 0, 0); 
-    gtk_widget_set_size_request(back_button, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), back_button, 0, 25); 
+    gtk_widget_set_size_request(back_button, 100, 50); 
 
     // Cheeseburger Image/ Button
-    // might have to resize the image manually tbh
-    // cheeseburger_img = gtk_image_new_from_file("/images/burgers/cheeseburger.jpg"); //wont load
-    // cheeseburger_btn = gtk_button_new_with_label("Cheeseburger");
     cheeseburger_btn = gtk_button_new();
     gtk_widget_set_name(cheeseburger_btn, "cburg_btn");
-    // gtk_widget_set_name(cheeseburger_img, "cburg_img");
-
-    gtk_fixed_put(GTK_FIXED(fixed), cheeseburger_btn, 0, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), cheeseburger_btn, 0, 100); 
     gtk_widget_set_size_request(cheeseburger_btn, 200, 200);
-    // gtk_button_set_always_show_image(GTK_BUTTON(cheeseburger_btn), TRUE);
-    // gtk_button_set_image (GTK_BUTTON(cheeseburger_btn), cheeseburger_img);
-    // g_signal_connect(cheeseburger_btn, "clicked", G_CALLBACK(burger_button_click), NULL);
 
     cheeseburger_info = gtk_button_new_with_label("Cheeseburger: \nsesame buns, beef, onions," 
                             " tomato, lettuce, cheese, bacon, ketchup \nPrice: $5.00");
-    gtk_fixed_put(GTK_FIXED(fixed), cheeseburger_info, 200, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), cheeseburger_info, 200, 100); 
     gtk_widget_set_size_request(cheeseburger_info, 200, 200);
 
     // Chicken Sandwich Image/ Button
     ch_sand_btn = gtk_button_new();
     gtk_widget_set_name(ch_sand_btn, "chicken_sand_btn");
-    gtk_fixed_put(GTK_FIXED(fixed), ch_sand_btn, 0, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), ch_sand_btn, 0, 350); 
     gtk_widget_set_size_request(ch_sand_btn, 200, 200);
 
     ch_sand_info = gtk_button_new_with_label("Chicken Sandwich: \nbrioche buns, fried chicken, " 
                             " pickles, bistro sauce \nPrice: $5.00");
-    gtk_fixed_put(GTK_FIXED(fixed), ch_sand_info, 200, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), ch_sand_info, 200, 350); 
     gtk_widget_set_size_request(ch_sand_info, 200, 200);
 
     // Pretzel Bun Image/ Button
     pretzel_btn = gtk_button_new();
     gtk_widget_set_name(pretzel_btn, "pretzel_btn");
-    gtk_fixed_put(GTK_FIXED(fixed), pretzel_btn, 700, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), pretzel_btn, 700, 100); 
     gtk_widget_set_size_request(pretzel_btn, 200, 200);
 
     pretzel_info = gtk_button_new_with_label("Pretzel Bun Burger: \npretzel buns, beef, lettuce," 
                             " cheese, \nbacon, fried onions, pickles, bistro sauce \nPrice: $7.00");
-    gtk_fixed_put(GTK_FIXED(fixed), pretzel_info, 900, 50); 
+    gtk_fixed_put(GTK_FIXED(fixed), pretzel_info, 900, 100); 
     gtk_widget_set_size_request(pretzel_info, 200, 200);
 
     // Fish Burger Image/ Button
     fish_btn = gtk_button_new();
     gtk_widget_set_name(fish_btn, "fish_btn");
-    gtk_fixed_put(GTK_FIXED(fixed), fish_btn, 700, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), fish_btn, 700, 350); 
     gtk_widget_set_size_request(fish_btn, 200, 200);
 
     fish_info = gtk_button_new_with_label("Fish Burger: \nbrioche buns, battered cod, tomato, lettuce, tartar sauce" 
                             " \nPrice: $4.00");
-    gtk_fixed_put(GTK_FIXED(fixed), fish_info, 900, 300); 
+    gtk_fixed_put(GTK_FIXED(fixed), fish_info, 900, 350); 
     gtk_widget_set_size_request(fish_info, 200, 200);
 
     // Pay Online Button
     pay = gtk_button_new_with_label("Pay Online");
-    gtk_fixed_put(GTK_FIXED(fixed), pay, 100, 0); 
-    gtk_widget_set_size_request(pay, 70, 30); 
+    gtk_fixed_put(GTK_FIXED(fixed), pay, 150, 25); 
+    gtk_widget_set_size_request(pay, 100, 50); 
 
     g_signal_connect(G_OBJECT(window), "destroy", 
         G_CALLBACK(gtk_main_quit), NULL);
