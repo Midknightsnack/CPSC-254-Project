@@ -24,7 +24,7 @@
 using namespace std;
 
 // allows css properties to load in GUI
-static void load_css(void){
+void load_css(){
     GtkCssProvider *provider;
     GdkDisplay *display;
     GdkScreen *screen;
@@ -47,6 +47,8 @@ static void load_css(void){
 int main(int argc, char *argv[]) {
     
     GtkWidget *window, *fixed; 
+    GtkWidget *review, *locations, *rewards,
+              *reservation, *pay;
     GtkWidget *back_button, *search, *burgers, 
               *deluxe_burgers, *sides, *drinks; // declare buttons
 
@@ -67,9 +69,35 @@ int main(int argc, char *argv[]) {
     gtk_fixed_put(GTK_FIXED(fixed), back_button, 0, 25); // (x, y) coordinates
     gtk_widget_set_size_request(back_button, 100, 50); // size of the button (x,y)
 
+    // Review Button
+    review = gtk_button_new_with_label("Write a Review");
+    gtk_widget_set_name(review, "btn_red"); // button only turns red when clicked on
+    gtk_fixed_put(GTK_FIXED(fixed), review, 225, 25); 
+    gtk_widget_set_size_request(review, 100, 50); 
+    
+    // Location Button
+    locations = gtk_button_new_with_label("View Locations");
+    gtk_fixed_put(GTK_FIXED(fixed), locations, 450, 25); 
+    gtk_widget_set_size_request(locations, 100, 50); 
+
+    // Rewards Button
+    rewards = gtk_button_new_with_label("Rewards");
+    gtk_fixed_put(GTK_FIXED(fixed), rewards, 775, 25); 
+    gtk_widget_set_size_request(rewards, 100, 50); 
+
+    // Reservation Button
+    reservation = gtk_button_new_with_label("Make a Reservation");
+    gtk_fixed_put(GTK_FIXED(fixed), reservation, 1000, 25); 
+    gtk_widget_set_size_request(reservation, 100, 50); 
+
+    // Pay Online Button
+    pay = gtk_button_new_with_label("Pay Online");
+    gtk_fixed_put(GTK_FIXED(fixed), pay, 1260, 25); 
+    gtk_widget_set_size_request(pay, 100, 50); 
+    
     // Search Button
     search = gtk_button_new_with_label("Search Menu");
-    gtk_fixed_put(GTK_FIXED(fixed), search, 200, 25); 
+    gtk_fixed_put(GTK_FIXED(fixed), search, 0, 100); 
     gtk_widget_set_size_request(search, 100, 50); 
     
     // Burgers Button

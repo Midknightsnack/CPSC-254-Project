@@ -29,7 +29,7 @@ GtkWidget *result;
 void menu_search(GtkWidget *search_btn, gpointer data);
 
 // allows css properties to load in GUI
-static void load_css(void){
+    void load_css(){
     GtkCssProvider *provider;
     GdkDisplay *display;
     GdkScreen *screen;
@@ -49,7 +49,9 @@ static void load_css(void){
 }
 
 int main(int argc, char* argv[]) {
-    GtkWidget *window, *grid, *search_btn, *back_btn;
+    GtkWidget *window, *grid, *search_btn, *back_btn, *fixed, *search_label;
+    GtkWidget *review, *locations, *rewards,
+              *reservation, *pay;
     gtk_init(&argc, &argv);
     load_css();
 
@@ -59,21 +61,57 @@ int main(int argc, char* argv[]) {
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
-    grid = gtk_grid_new();
-    gtk_container_add(GTK_CONTAINER(window), grid);
+    fixed = gtk_fixed_new();
+    gtk_container_add(GTK_CONTAINER(window), fixed);
 
     back_btn = gtk_button_new_with_label("Back");
-    gtk_grid_attach(GTK_GRID(grid), back_btn, 0, 0, 1, 1); //column, row, width, height
+    gtk_fixed_put(GTK_FIXED(fixed), back_btn, 0, 25); 
+    gtk_widget_set_size_request(back_btn, 100, 50); 
+
+    // Review Button
+    review = gtk_button_new_with_label("Write a Review");
+    gtk_widget_set_name(review, "btn_red"); // button only turns red when clicked on
+    gtk_fixed_put(GTK_FIXED(fixed), review, 225, 25); 
+    gtk_widget_set_size_request(review, 100, 50); 
+    
+    // Location Button
+    locations = gtk_button_new_with_label("View Locations");
+    gtk_fixed_put(GTK_FIXED(fixed), locations, 450, 25); 
+    gtk_widget_set_size_request(locations, 100, 50); 
+
+    // Rewards Button
+    rewards = gtk_button_new_with_label("Rewards");
+    gtk_fixed_put(GTK_FIXED(fixed), rewards, 775, 25); 
+    gtk_widget_set_size_request(rewards, 100, 50); 
+
+    // Reservation Button
+    reservation = gtk_button_new_with_label("Make a Reservation");
+    gtk_fixed_put(GTK_FIXED(fixed), reservation, 1000, 25); 
+    gtk_widget_set_size_request(reservation, 100, 50); 
+
+    // Pay Online Button
+    pay = gtk_button_new_with_label("Pay Online");
+    gtk_fixed_put(GTK_FIXED(fixed), pay, 1260, 25); 
+    gtk_widget_set_size_request(pay, 100, 50);
+    
+    search_label = gtk_label_new("Search the Menu:");
+    gtk_widget_set_name(search_label, "search_label");
+    gtk_fixed_put(GTK_FIXED(fixed), search_label, 0, 65); 
+    gtk_widget_set_size_request(search_label, 100, 100); 
 
     menu_input = gtk_entry_new();
-    gtk_grid_attach(GTK_GRID(grid), menu_input, 0, 1, 1, 1); //column, row, width, height
+    gtk_fixed_put(GTK_FIXED(fixed), menu_input, 0, 130); 
+    gtk_widget_set_size_request(menu_input, 50, 20); 
 
     search_btn = gtk_button_new_with_label("Search");
+    gtk_fixed_put(GTK_FIXED(fixed), search_btn, 165, 130); 
+    gtk_widget_set_size_request(search_btn, 50, 20); 
     g_signal_connect(search_btn, "clicked", G_CALLBACK(menu_search), NULL);
-    gtk_grid_attach(GTK_GRID(grid), search_btn, 1, 1, 1, 1);
 
     result = gtk_label_new("No results found");
-    gtk_grid_attach(GTK_GRID(grid), result, 0, 2, 1, 1);
+    gtk_widget_set_name(result, "results");
+    gtk_fixed_put(GTK_FIXED(fixed), result, 0, 175); 
+    gtk_widget_set_size_request(result, 100, 100); 
 
     gtk_widget_show_all(window);
     gtk_main();
@@ -90,14 +128,14 @@ void menu_search(GtkWidget *search_btn, gpointer data){
                                     "fried onions", "onions", "pickles", "bistro sauce", "pretzel bun burger"};
     vector<string> fish_burger = {"burgers", "fish", "brioche buns", "battered cod", "tomato", "lettuce", "tartar sauce", "fish burger"};
 
-    vector<string> western_bacon = {"burgers", "deluxe", "deluxe burgers", "brioche buns", "beef", 
+    vector<string> western_bacon = {"burgers", "deluxe", "deluxe burgers", "brioche buns", "beef", "wagyu", "wagyu beef",
                                     "onion rings", "onions", "cheese", "bacon", "BBQ sauce", "western bacon cheeseburger"}; 
-    vector<string> wagyu_burger = {"burgers", "deluxe", "deluxe burgers", "brioche buns", "wagyu beef", "wagyu",
+    vector<string> wagyu_burger = {"burgers", "deluxe", "deluxe burgers", "brioche buns", "wagyu beef", "wagyu", "beef",
                                     "cheese", "pickles", "ketchup", "cheese sauce", "bistro sauce", "wagyu burger"};
-    vector<string> bistro_burger = {"burgers", "deluxe", "deluxe burgers", "sesame buns", "beef", "lettuce", "tomato", 
+    vector<string> bistro_burger = {"burgers", "deluxe", "deluxe burgers", "sesame buns", "wagyu", "wagyu beef", "beef", "lettuce", "tomato", 
                                     "onion rings", "onions", "cheese", "bistro sauce", "BBQ sauce", "bistro burger"};
     vector<string> gold_burger = {"burgers", "deluxe", "deluxe burgers", "gold sesame buns", "gold", "wagyu",
-                                    "wagyu beef", "cheese", "tomato", "lettuce", "bistro sauce", "gold burger"};
+                                    "wagyu beef", "beef", "cheese", "tomato", "lettuce", "bistro sauce", "gold burger"};
 
     vector<string> chicken_nuggets = {"sides", "chicken", "chicken nuggets"};
     vector<string> onion_rings = {"sides", "onions", "onion rings"};

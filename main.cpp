@@ -24,7 +24,7 @@
 using namespace std;
 
 // allows css properties to load in GUI
-static void load_css(void){
+void load_css(){
     GtkCssProvider *provider;
     GdkDisplay *display;
     GdkScreen *screen;
@@ -43,23 +43,8 @@ static void load_css(void){
     g_object_unref(provider); 
 }
 
-//supposed to make a shape on screen but currently shows nothing
-// static void do_drawing(cairo_t *cr){
-//     cairo_set_source_rgb(cr, 0.5, 0.5, 1);
-//     cairo_rectangle(cr, 150, 140, 100, 100);
-//     cairo_fill(cr);
-// }
-
-// static gboolean on_draw_event(GtkWidget *widget, cairo_t *cr, gpointer user_data){
-//     do_drawing(cr);
-//     return FALSE;
-// }
-
 
 int main(int argc, char *argv[]) {
-    
-    // GtkWidget *darea;
-    // GtkWidget *menu_window;
     GtkWidget *window, *fixed; 
     GtkWidget *review, *menu, *locations, *rewards,
               *reservation, *pay, *exit; // declare buttons
@@ -73,17 +58,8 @@ int main(int argc, char *argv[]) {
     gtk_window_set_default_size(GTK_WINDOW(window), 1360, 600); // full window size on my screen
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
 
-    // menu_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    // gtk_window_set_default_size(GTK_WINDOW(menu_window), 1360, 600);
-
     fixed = gtk_fixed_new();
     gtk_container_add(GTK_CONTAINER(window), fixed);
-
-    // darea = gtk_drawing_area_new();
-    // gtk_container_add(GTK_CONTAINER(fixed), darea);
-    // gtk_fixed_put(GTK_FIXED(fixed), darea, 0, 0);
-    // g_signal_connect(G_OBJECT(darea), "draw", 
-    //     G_CALLBACK(on_draw_event), NULL);
 
     // Menu Button
     menu = gtk_button_new_with_label("Menu");

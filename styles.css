@@ -106,12 +106,15 @@ window{
     background-image: url('resized_images/drinks/blue_bistro.jpg');
     background-position: 0px 0px;
 }
-/* #cburg_img{
-    height: 200px;
-    width: auto;
-} */
-/* #darea{
-    width: 100px;
-    height: 100px;
-    background: red;
-} */
+
+#search_label{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+#results{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkseagreen;
+}
