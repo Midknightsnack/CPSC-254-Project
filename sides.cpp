@@ -24,7 +24,7 @@
 using namespace std;
 
 // allows css properties to load in GUI
-    void load_css(){
+void load_css(){
     GtkCssProvider *provider;
     GdkDisplay *display;
     GdkScreen *screen;

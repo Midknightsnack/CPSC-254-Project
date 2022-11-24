@@ -29,7 +29,7 @@ GtkWidget *result;
 void menu_search(GtkWidget *search_btn, gpointer data);
 
 // allows css properties to load in GUI
-    void load_css(){
+void load_css(){
     GtkCssProvider *provider;
     GdkDisplay *display;
     GdkScreen *screen;
