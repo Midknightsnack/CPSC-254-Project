@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
     GtkWidget *review, *menu, *locations, *rewards,
               *reservation, *pay, *exit; // declare buttons
     GtkWidget *rating_label, *review_label, *submit_btn;
-//*radio, *radio2,
+    
     gtk_init(&argc, &argv);
     load_css();
 
@@ -144,7 +144,6 @@ int main(int argc, char *argv[]) {
     gtk_fixed_put(GTK_FIXED(fixed), submit_btn, 200, 330); 
     gtk_widget_set_size_request(submit_btn, 100, 50); 
     g_signal_connect(submit_btn, "clicked", G_CALLBACK(print_review), NULL);
-    //g_signal_connect(submit_btn, "clicked", G_CALLBACK(toggled_func), NULL);
 
     // Printing results
     result = gtk_label_new("Review will appear here");
@@ -169,7 +168,6 @@ int main(int argc, char *argv[]) {
 
 void print_review(GtkWidget *submit_btn, gpointer data){
     const char* review = gtk_entry_get_text(GTK_ENTRY(review_input));
-    //const char* review = "wow";
     gtk_label_set_text(GTK_LABEL(result), review);
 }
 
