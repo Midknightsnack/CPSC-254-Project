@@ -17,10 +17,8 @@
 //     along with Burger Bistro. If not, see <https://www.gnu.org/licenses/>.
 
 #include <gtk/gtk.h>
-#include <cairo.h>
 #include <gtkmm.h>
 #include <iostream>
-#include "click.h"
 using namespace std;
 
 // allows css properties to load in GUI
@@ -91,8 +89,8 @@ int main(int argc, char *argv[]) {
     gtk_widget_set_size_request(reservation, 100, 50); 
 
     // Pay Online Button
-    pay = gtk_button_new_with_label("Pay Online");
-    gtk_fixed_put(GTK_FIXED(fixed), pay, 1260, 25); 
+    pay = gtk_button_new_with_label("Pay/Order Online");
+    gtk_fixed_put(GTK_FIXED(fixed), pay, 1240, 25); 
     gtk_widget_set_size_request(pay, 100, 50);
 
     // Cheeseburger Image/ Button

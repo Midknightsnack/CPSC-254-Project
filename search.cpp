@@ -49,7 +49,7 @@ void load_css(){
 }
 
 int main(int argc, char* argv[]) {
-    GtkWidget *window, *grid, *search_btn, *back_btn, *fixed, *search_label;
+    GtkWidget *window, *search_btn, *search_label, *back_btn, *fixed;
     GtkWidget *review, *locations, *rewards,
               *reservation, *pay;
     gtk_init(&argc, &argv);
@@ -90,8 +90,8 @@ int main(int argc, char* argv[]) {
     gtk_widget_set_size_request(reservation, 100, 50); 
 
     // Pay Online Button
-    pay = gtk_button_new_with_label("Pay Online");
-    gtk_fixed_put(GTK_FIXED(fixed), pay, 1260, 25); 
+    pay = gtk_button_new_with_label("Pay/Order Online");
+    gtk_fixed_put(GTK_FIXED(fixed), pay, 1240, 25); 
     gtk_widget_set_size_request(pay, 100, 50);
     
     search_label = gtk_label_new("Search the Menu:");
