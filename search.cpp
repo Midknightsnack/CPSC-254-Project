@@ -154,28 +154,24 @@ void menu_search(GtkWidget *search_btn, gpointer data){
     // Burgers
     for (int i = 0; i < cheeseburger.size(); i++){
         if (menu_item == cheeseburger[i]){
-            cout << "Cheeseburger" << endl;
             menu_list.push_back("Cheeseburger");
         }
     }
 
     for (int i = 0; i < chicken_sandwich.size(); i++){
         if (menu_item == chicken_sandwich[i]){
-            cout << "Chicken Sandwich" << endl;
             menu_list.push_back("Chicken Sandwich");
         }
     }
 
     for (int i = 0; i < pretzel_bun.size(); i++){
         if (menu_item == pretzel_bun[i]){
-            cout << "Pretzel Bun Burger" << endl;
             menu_list.push_back("Pretzel Bun Burger");
         }
     }
 
     for (int i = 0; i < fish_burger.size(); i++){
         if (menu_item == fish_burger[i]){
-            cout << "Fish Burger" << endl;
             menu_list.push_back("Fish Burger");
         }
     }
@@ -183,28 +179,24 @@ void menu_search(GtkWidget *search_btn, gpointer data){
     // Deluxe burgers
     for (int i = 0; i < western_bacon.size(); i++){
         if (menu_item == western_bacon[i]){
-            cout << "Western Bacon Cheeseburger" << endl;
             menu_list.push_back("Western Bacon Cheeseburger");
         }
     }
 
     for (int i = 0; i < wagyu_burger.size(); i++){
         if (menu_item == wagyu_burger[i]){
-            cout << "Wagyu Burger" << endl;
             menu_list.push_back("Wagyu Burger");
         }
     }
 
     for (int i = 0; i < bistro_burger.size(); i++){
         if (menu_item == bistro_burger[i]){
-            cout << "Bistro Burger" << endl;
             menu_list.push_back("Bistro Burger");
         }
     }
 
     for (int i = 0; i < gold_burger.size(); i++){
         if (menu_item == gold_burger[i]){
-            cout << "Gold Burger" << endl;
             menu_list.push_back("Gold Burger");
         }
     }
@@ -212,21 +204,18 @@ void menu_search(GtkWidget *search_btn, gpointer data){
     //Sides
     for (int i = 0; i < chicken_nuggets.size(); i++){
         if (menu_item == chicken_nuggets[i]){
-            cout << "Chicken Nuggets" << endl;
             menu_list.push_back("Chicken Nuggets");
         }
     }
 
     for (int i = 0; i < onion_rings.size(); i++){
         if (menu_item == onion_rings[i]){
-            cout << "Onion Rings" << endl;
             menu_list.push_back("Onion Rings");
         }
     }
 
     for (int i = 0; i < fries.size(); i++){
         if (menu_item == fries[i]){
-            cout << "Fries" << endl;
             menu_list.push_back("Fries");
         }
     }
@@ -234,28 +223,24 @@ void menu_search(GtkWidget *search_btn, gpointer data){
     // Drinks
     for (int i = 0; i < soda.size(); i++){
         if (menu_item == soda[i]){
-            cout << "Soda" << endl;
             menu_list.push_back("Soda");
         }
     }
 
     for (int i = 0; i < lemonade.size(); i++){
         if (menu_item == lemonade[i]){
-            cout << "Lemonade" << endl;
             menu_list.push_back("Lemonade");
         }
     }
 
     for (int i = 0; i < milkshake.size(); i++){
         if (menu_item == milkshake[i]){
-            cout << "Milkshake" << endl;
             menu_list.push_back("Milkshake");
         }
     }
 
     for (int i = 0; i < blue_bistro.size(); i++){
         if (menu_item == blue_bistro[i]){
-            cout << "Blue Bistro" << endl;
             menu_list.push_back("Blue Bistro");
         }
     }
@@ -273,7 +258,5 @@ void menu_search(GtkWidget *search_btn, gpointer data){
     //converting string to const char*
     const char* results = menu_string.c_str();
 
-    // g_print("%s\n", gtk_entry_get_text(GTK_ENTRY(menu_input)));
-    // const char* input = gtk_entry_get_text(GTK_ENTRY(menu_input));
     gtk_label_set_text(GTK_LABEL(result), results);
 }

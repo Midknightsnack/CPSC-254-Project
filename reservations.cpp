@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
 
     // Reservation Button
     reservation = gtk_button_new_with_label("Make a Reservation");
-    gtk_widget_set_name(reservations, "resbutton");
+    gtk_widget_set_name(reservation, "resbutton");
     gtk_fixed_put(GTK_FIXED(fixed), reservation, 1000, 25); 
     gtk_widget_set_size_request(reservation, 100, 50); 
 
