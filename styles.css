@@ -28,82 +28,82 @@ window{
 /*Menu*/
 /*Burgers*/
 #cburg_btn{
-    background-image: url('drawn_images/burgers/cheeseburger.png');
+    background-image: url('images/burgers/cheeseburger.png');
     background-position: 0px 0px;
     /* color: white;
     font-size: large; */
 }
 
 #chicken_sand_btn{
-    background-image: url('drawn_images/burgers/chicken_sandwich.png');
+    background-image: url('images/burgers/chicken_sandwich.png');
     background-position: 0px 0px;
 }
 
 #pretzel_btn{
-    background-image: url('drawn_images/burgers/pretzel_bun.png');
+    background-image: url('images/burgers/pretzel_bun.png');
     background-position: 0px 0px;
 }
 
 #fish_btn{
-    background-image: url('drawn_images/burgers/fish_burger.png');
+    background-image: url('images/burgers/fish_burger.png');
     background-position: 0px 0px;
 }
 
 /*Deluxe Burgers*/
 #wbacon_btn{
-    background-image: url('drawn_images/deluxe_burgers/western_bacon.png');
+    background-image: url('images/deluxe_burgers/western_bacon.png');
     background-position: 0px 0px;
 }
 
 #wagyu_btn{
-    background-image: url('drawn_images/deluxe_burgers/wagyu.png');
+    background-image: url('images/deluxe_burgers/wagyu.png');
     background-position: 0px 0px;
 }
 
 #bistro_btn{
-    background-image: url('drawn_images/deluxe_burgers/bistro.png');
+    background-image: url('images/deluxe_burgers/bistro.png');
     background-position: 0px 0px;
 }
 
 #gold_btn{
-    background-image: url('drawn_images/deluxe_burgers/gold.png');
+    background-image: url('images/deluxe_burgers/gold.png');
     background-position: 0px 0px;
 }
 
 /*Sides*/
 #nuggets_btn{
-    background-image: url('drawn_images/sides/chicken_nuggets.png');
+    background-image: url('images/sides/chicken_nuggets.png');
     background-position: 0px 0px;
 }
 
 #fries_btn{
-    background-image: url('drawn_images/sides/fries.png');
+    background-image: url('images/sides/fries.png');
     background-position: 0px 0px;
 }
 
 #onion_rings_btn{
-    background-image: url('drawn_images/sides/onion_rings.png');
+    background-image: url('images/sides/onion_rings.png');
     background-position: 0px 0px;
 }
 
 /*Drinks*/
 #soda_btn{
-    background-image: url('drawn_images/drinks/soda.png');
+    background-image: url('images/drinks/soda.png');
     background-position: 0px 0px;
 }
 
 #lemonade_btn{
-    background-image: url('drawn_images/drinks/lemonade.png');
+    background-image: url('images/drinks/lemonade.png');
     background-position: 0px 0px;
 }
 
 #milkshake_btn{
-    background-image: url('drawn_images/drinks/milkshake.png');
+    background-image: url('images/drinks/milkshake.png');
     background-position: 0px 0px;
 }
 
 #bluedrink_btn{
-    background-image: url('drawn_images/drinks/blue_bistro.png');
+    background-image: url('images/drinks/blue_bistro.png');
     background-position: 0px 0px;
 }
 
